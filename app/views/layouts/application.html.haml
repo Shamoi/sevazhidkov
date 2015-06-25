@@ -8,7 +8,8 @@
     = csrf_meta_tags
   %body
     %header
-      %h1.name Сева Жидков
+      %h1.name
+        = link_to("Сева Жидков", root_path)
       %p.about-small Люблю программирование и себя
     = yield
     %footer
