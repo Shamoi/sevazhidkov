@@ -46,6 +46,9 @@ group :development, :test do
 
   # Using rspec for tests
   gem 'rspec-rails'
+
+  # Minitest needed for rspec
+  gem "minitest"
 end
 
 group :test do
