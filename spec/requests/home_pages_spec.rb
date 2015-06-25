@@ -9,7 +9,7 @@ describe "Home pages" do
   end
 
   describe "Contact page" do
-    it "should have th content 'Контакты'" do
+    it "should have the content 'Контакты'" do
       visit '/contact'
       expect(page).to have_content('Контакты')
     end
