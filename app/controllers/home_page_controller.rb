@@ -4,5 +4,6 @@ class HomePageController < ApplicationController
   end
 
   def contact
+    @title = 'связаться со мной'
   end
 end
