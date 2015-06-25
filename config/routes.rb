@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'admin/new'
+
+  get 'remove/Admins'
+
   get 'admins/new'
 
   root 'home_page#home'
