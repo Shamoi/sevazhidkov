@@ -7,6 +7,8 @@ gem 'rails', '4.2.0'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Use HAML for html templates
+gem 'haml-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -41,7 +43,10 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+<<<<<<< HEAD
 
   # Using rspec for tests
   gem 'rspec-rails', '2.13.1'
+=======
+>>>>>>> home-page
 end
