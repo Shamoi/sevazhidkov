@@ -10,15 +10,6 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   %body
-    %header
-      %h1.name
-        = link_to("Сева Жидков", root_path)
-      %p.about-small Люблю программирование и себя
+    = render 'layouts/header'
     = yield
-    %footer
-      = link_to("Главная", root_path)
-      = link_to("Связаться со мной", contact_path)
-      %span.made-with-love
-        Сделано с
-        %span.heart ♥
-        на Ruby On Rails
+    = render 'layouts/footer'
