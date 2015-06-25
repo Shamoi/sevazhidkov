@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admins/new'
+
   root 'home_page#home'
 
   get '/contact', to: 'home_page#contact', as: 'contact'
