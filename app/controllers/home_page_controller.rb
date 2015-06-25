@@ -1,9 +1,9 @@
 class HomePageController < ApplicationController
   def home
-    @title = 'обо мне'
+    @title = 'Обо мне'
   end
 
   def contact
-    @title = 'связаться со мной'
+    @title = 'Связаться со мной'
   end
 end
