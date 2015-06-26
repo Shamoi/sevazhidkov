@@ -1,2 +1,8 @@
-%h1 Services#show
-%p Find me in app/views/services/show.html.haml
+%h2
+  = link_to(@service.name, @service.link)
+%p
+  Описание:
+  = @service.description
+%p
+  URL для админки:
+  = link_to(@service.admin_link, @service.admin_link)

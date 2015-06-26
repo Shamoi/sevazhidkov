@@ -16,6 +16,6 @@ class ServicesController < ApplicationController
   end
 
   def show
-    puts params
+    @service = Service.find(params[:id])
   end
 end
