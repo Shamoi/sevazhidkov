@@ -1,3 +1,7 @@
 .services
   - @services.each do |service|
-    = link_to(service.name, '#')
+    %article.service
+      = link_to(service.name + ":", '#')
+      = link_to("Информация", service)
+      = link_to("Изменить", edit_service_path(service))
+      = link_to("Админка", service.admin_link)
