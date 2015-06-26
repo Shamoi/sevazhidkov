@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = Admin.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      flash[:success] = "Вы успешно вошли в админ-панель"
+      flash[:success] = "Вы успешно вошли в админку"
       redirect_to admin_path
     else
       flash[:error] = "Неправильный логин/пароль"
