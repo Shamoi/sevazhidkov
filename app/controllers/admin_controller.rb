@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  def apps
+  def services
     redirect_not_admin
   end
 end

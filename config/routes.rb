@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   match '/admin/login',       to: 'sessions#new',     via: 'get',    as: 'login'
   match '/admin/logout',      to: 'sessions#destroy', via: 'get',    as: 'logout'
 
-  get '/admin', to: 'admin#apps', as: 'admin'
+  get '/admin', to: 'admin#services', as: 'admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
