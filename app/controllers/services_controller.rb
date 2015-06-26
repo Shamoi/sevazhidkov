@@ -1,4 +1,6 @@
 class ServicesController < ApplicationController
+  before_action :redirect_not_admin
+  
   def new
   end
 
