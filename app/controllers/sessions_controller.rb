@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Вы успешно вошли в админку"
       redirect_to admin_path
     else
-      flash[:error] = "Неправильный логин/пароль"
+      flash[:danger] = "Неправильный логин/пароль"
       redirect_to login_path
     end
   end

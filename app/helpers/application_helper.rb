@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def redirect_not_admin
     if !admin?
-      flash[:error] = "Необходимо авторизоваться, чтобы использовать админку"
+      flash[:danger] = "Необходимо авторизоваться, чтобы использовать админку"
       redirect_to login_path
     end
   end
