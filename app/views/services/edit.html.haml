@@ -1,15 +1,15 @@
 %h2 Редактировать сервис
 = form_for(@service) do |f|
-  = f.label :name
+  = f.label :name, "Название сервиса"
   = f.text_field :name
 
-  = f.label :description
+  = f.label :description, "Описание сервиса"
   = f.text_field :description
 
-  = f.label :link
+  = f.label :link, "Ссылка на сервис"
   = f.text_field :link
 
-  = f.label :admin_link
+  = f.label :admin_link, "Ссылка на админку сервиса"
   = f.text_field :admin_link
 
   = f.submit "Сохранить изменения"
