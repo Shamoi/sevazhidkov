@@ -1,8 +1,11 @@
 - provide(:title, "Список сервисов")
 .services
+  %h2 Сервисы
   - @services.each do |service|
     %article.service
-      = link_to(service.name + ":", '#')
+      .service-name
+        %h3
+          = link_to(service.name + ":", '#')
       = link_to("Информация", service)
       = link_to("Изменить", edit_service_path(service))
       = link_to("Админка", service.admin_link)
