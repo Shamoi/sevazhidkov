@@ -22,35 +22,14 @@
     %p
       Я программист.
 
+- @services.each do |service|
+  = service.name
+
 %nav.services
   %h2 Меню
-  .service#blog
-    .service-name
-      = link_to("Блог")
-    .service-description
-      Пишу о себе и программировании
-  .service#travel
-    .service-name
-      = link_to("Поездки")
-    .service-description
-      Куда и зачем я езжу
-  .service#selfie
-    .service-name
-      = link_to("Сэлфи")
-    .service-description
-      Фоткаю сам себя
-  .service#social-networks
-    .service-name
-      = link_to("Социальные сети")
-    .service-description
-      Все мои посты в одном месте
-  .service#ratings
-    .service-name
-      = link_to("Рейтинги")
-    .service-description
-      Оцениваю разные вещи
-  .service#lulz
-    .service-name
-      = link_to("Лулз")
-    .service-description
-      Коллекция странных вещей
+  - @services.each do |service|
+    .service
+      .service-name
+        = link_to service.name, service.link
+      .service-description
+        = service.description
