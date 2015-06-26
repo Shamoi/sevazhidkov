@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
   match '/admin/login',       to: 'sessions#new',     via: 'get',    as: 'login'
-  match '/admin/logout',      to: 'sessions#destroy', via: 'delete'
+  match '/admin/logout',      to: 'sessions#destroy', via: 'delete', as: 'logout'
 
   get '/admin', to: 'admin#apps', as: 'admin'
   # The priority is based upon order of creation: first created -> highest priority.
