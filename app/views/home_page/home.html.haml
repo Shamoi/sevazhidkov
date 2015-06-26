@@ -29,6 +29,7 @@
   - @services.each do |service|
     .service
       .service-name
-        = link_to service.name, service.link
+        %h3
+          = link_to service.name, service.link
       .service-description
         = service.description
