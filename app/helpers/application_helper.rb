@@ -6,4 +6,11 @@ module ApplicationHelper
       return page_title + " – Сева Жидков"
     end
   end
+
+  def redirect_not_admin
+    if !admin?
+      flash[:error] = "Необходимо авторизоваться, чтобы использовать админку"
+      redirect_to login_path
+    end
+  end
 end
