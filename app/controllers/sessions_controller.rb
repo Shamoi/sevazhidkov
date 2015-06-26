@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in user
       flash[:success] = "Вы успешно вошли в админ-панель"
-      redirect_to root_path # In future, change it to admin path
+      redirect_to admin_path
     else
       flash[:error] = "Неправильный логин/пароль"
       redirect_to login_path
