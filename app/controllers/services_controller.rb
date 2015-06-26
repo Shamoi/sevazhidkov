@@ -11,9 +11,11 @@ class ServicesController < ApplicationController
   def edit
   end
 
-  def list
+  def index
+    @services = Service.all
   end
 
   def show
+    puts params
   end
 end
