@@ -1,6 +1,8 @@
 %footer
   = link_to("Главная", root_path)
   = link_to("Связаться со мной", contact_path)
+  - if admin?
+    = render 'layouts/admin_footer'
   %span.made-with-love
     Сделано с
     %span.heart ♥
