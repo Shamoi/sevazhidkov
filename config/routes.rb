@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   root 'home_page#home'
 
   get '/contact', to: 'home_page#contact', as: 'contact'
-  get '/admin', to: 'admin#login', as: 'login'
+
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/admin',        to: 'sessions#new',     via: 'get'
+  match '/admin/logout', to: 'sessions#destroy', via: 'delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
