@@ -13,7 +13,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(admin_attributes)
     if @admin.save
       flash[:success] = "Администратор создан"
-      redirect_to admin_index_path
+      redirect_to admins_path
     else
       flash[:danger] = "Произошла ошибка, проверьте правильность заполнения формы."
       redirect_to new_admin_path
@@ -25,7 +25,7 @@ class AdminsController < ApplicationController
     @admin.destroy
 
     flash[:success] = "Администратор успешно удален"
-    redirect_to admin_index_path
+    redirect_to admins_path
   end
 
   def edit
@@ -36,7 +36,7 @@ class AdminsController < ApplicationController
     @admin = Admin.find(params[:id])
     if @admin.update_attributes(admin_attributes)
       flash[:success] = "Данные администратора обновлены"
-      redirect_to admin_index_path
+      redirect_to admins_path
     else
       redirect_to edit_admin_path(@admin)
     end
