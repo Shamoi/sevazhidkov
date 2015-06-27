@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   match '/admin/logout',      to: 'sessions#destroy', via: 'get',    as: 'logout'
 
   resources :services
-  resources :admin, only: [:new, :create, :destroy, :index, :update, :edit], as: 'admin'
+  resources :admins, only: [:new, :create, :destroy, :index, :update, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
