@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in user
       flash[:success] = "Вы успешно вошли в админку"
-      redirect_to admin_path
+      redirect_to services_path
     else
       flash[:danger] = "Неправильный логин/пароль"
       redirect_to login_path
