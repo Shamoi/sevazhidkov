@@ -9,6 +9,14 @@ class ServicesController < ApplicationController
   end
 
   def create
+    @service = Service.new(service_attributes)
+    if @service.save
+      flash[:success] = "Сервис создан"
+      redirect_to 'index'
+    else
+      flash[:danger] = "Произошла ошибка"
+      redirect_to 'new'
+    end
   end
 
   def destroy
