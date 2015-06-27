@@ -21,7 +21,7 @@ class AdminsController < ApplicationController
   end
 
   def destroy
-    @admin = Service.find(params[:id])
+    @admin = Admin.find(params[:id])
     @admin.destroy
 
     flash[:success] = "Администратор успешно удален"
