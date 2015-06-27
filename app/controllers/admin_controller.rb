@@ -2,11 +2,11 @@ class AdminController < ApplicationController
   before_action :redirect_not_admin
 
   def index
-    @services = Admin.all
+    @admins = Admin.all
   end
 
   def new
-    @service = Admin.new
+    @admin = Admin.new
   end
 
   def create
