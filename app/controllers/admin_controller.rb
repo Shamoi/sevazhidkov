@@ -12,7 +12,7 @@ class AdminController < ApplicationController
   def create
     @admin = Admin.new(admin_attributes)
     if @admin.save
-      flash[:success] = "Сервис создан"
+      flash[:success] = "Администратор создан"
       redirect_to admin_path
     else
       flash[:danger] = "Произошла ошибка, проверьте правильность заполнения формы."
@@ -24,7 +24,7 @@ class AdminController < ApplicationController
     @admin = Service.find(params[:id])
     @admin.destroy
 
-    flash[:success] = "Сервис успешно удален"
+    flash[:success] = "Администратор успешно удален"
     redirect_to admin_path
   end
 
@@ -35,10 +35,10 @@ class AdminController < ApplicationController
   def update
     @admin = Admin.find(params[:id])
     if @admin.update_attributes(admin_attributes)
-      flash[:success] = "Сервис обновлен"
-      redirect_to @admin
+      flash[:success] = "Данные администратора обновлены"
+      redirect_to admin_path
     else
-      redirect_to 'edit'
+      redirect_to edit_admin_path(@admin)
     end
   end
 
