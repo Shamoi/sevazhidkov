@@ -1,6 +1,7 @@
 - provide(:title, "Список сервисов")
 .services
   %h2 Сервисы
+  = link_to("Создать новый сервис", new_service_path, class: 'new-service-link')
   - @services.each do |service|
     %article.service
       .service-name
