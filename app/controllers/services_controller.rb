@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_attributes)
     if @service.save
       flash[:success] = "Сервис создан"
-      redirect_to service_path
+      redirect_to @service
     else
       flash[:danger] = "Произошла ошибка, проверьте правильность заполнения формы."
       redirect_to new_service_path
