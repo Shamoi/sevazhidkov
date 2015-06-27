@@ -21,6 +21,11 @@ class ServicesController < ApplicationController
   end
 
   def destroy
+    @service = Service.find(params[:id])
+    @service.destroy
+
+    flash[:success] = "Сервис успешно удален"
+    redirect_to services_path
   end
 
   def edit
