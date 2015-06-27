@@ -1,4 +1,4 @@
-class AdminController < ApplicationController
+class AdminsController < ApplicationController
   before_action :redirect_not_admin
 
   def index
