@@ -2,5 +2,5 @@
   = form_for(@admin) do |f|
     = f.text_field :email, placeholder: "E-mail", class: "form-control"
     = f.text_field :name, placeholder: "Имя", class: "form-control"
-    = f.text_field :password, placeholder: "Пароль", class: "form-control"
+    = f.password_field :password, placeholder: "Пароль", class: "form-control"
     = f.submit "Сохранить изменения", class: "form-control"
