@@ -20,8 +20,6 @@ class ServicesController < ApplicationController
 
   def update
     @service = Service.find(params[:id])
-    service_attributes = params[:service].permit(:name, :description,
-                                                 :link, :admin_link  )
     if @service.update_attributes(service_attributes)
       flash[:success] = "Сервис обновлен"
       redirect_to @service
@@ -33,4 +31,10 @@ class ServicesController < ApplicationController
   def show
     @service = Service.find(params[:id])
   end
+
+  private
+    def service_attributes
+      params.require(:service).permit(:name, :description,
+                                   :link, :admin_link  )
+    end
 end
