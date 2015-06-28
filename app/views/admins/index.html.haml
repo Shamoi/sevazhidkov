@@ -4,6 +4,8 @@
   = link_to("Создать нового администратора", new_admin_path, class: 'new-admin-link')
   - @admins.each do |admin|
     %article.admin
-      = admin.name
-      = admin.email
+      .admin-name
+        = admin.name
+      .admin-email
+        = mail_to(admin.email, admin.email)
     = link_to("Изменить", edit_admin_path(admin))
