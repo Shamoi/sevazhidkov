@@ -1,5 +1,5 @@
 - provide(:title, "Список администраторов")
-.services
+.admin
   %h2 Администраторы
   = link_to("Создать нового администратора", new_admin_path, class: 'new-admin-link')
   - @admins.each do |admin|
