@@ -2,6 +2,6 @@
   = link_to("Главная", root_path)
   = link_to("Связаться со мной", contact_path)
   - if !admin?
-    = link_to("Админка", new_session_path)
+    = link_to("Админка", login_path)
   - if admin?
     = render 'layouts/admin_footer'
