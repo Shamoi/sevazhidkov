@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'home_page#contact', as: 'contact'
 
   resources :sessions, only: [:new, :create, :destroy]
-  match '/admin/login',       to: 'sessions#new',     via: 'get',    as: 'login'
+  match '/admin',             to: 'sessions#new',     via: 'get',    as: 'login'
   match '/admin/logout',      to: 'sessions#destroy', via: 'get',    as: 'logout'
 
   resources :services
