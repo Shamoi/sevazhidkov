@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   # Services
 
+  # Blog
   resources :articles
+  match '/blog', to: 'articles#index', via: 'get', as: 'blog'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
