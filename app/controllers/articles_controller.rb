@@ -18,6 +18,10 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def index
     @articles = Article.order(:updated_at)
   end
