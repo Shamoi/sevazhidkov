@@ -3,3 +3,5 @@
 - @articles.each do |article|
   %article
     = link_to(article.title, article)
+    - if admin?
+      = link("Редактировать", edit_article_path(article))
