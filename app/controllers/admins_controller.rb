@@ -1,5 +1,6 @@
 class AdminsController < ApplicationController
-  before_action :redirect_not_admin
+  before_action :redirect_not_admin, only: [:index, :new, :create,
+                                            :destroy, :edit, :update]
 
   def index
     @admins = Admin.all
