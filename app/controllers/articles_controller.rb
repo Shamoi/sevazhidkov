@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :redirect_not_admin,
+
   def new
     @article = Article.new
   end
@@ -39,6 +41,6 @@ class ArticlesController < ApplicationController
 
   private
     def article_attributes
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text, :description)
     end
 end
