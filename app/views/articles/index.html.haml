@@ -1,3 +1,5 @@
+- provide(:title, "Блог")
+%h2 Блог
 - @articles.each do |article|
   %article
     = link_to(article.title, article)
