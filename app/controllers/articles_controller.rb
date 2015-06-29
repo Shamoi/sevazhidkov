@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
     else
       flash[:danger] = "Произошла ошибка во время публикации. Попробуйте еще раз."
       redirect_to new_article_path
+    end
   end
 
   private
