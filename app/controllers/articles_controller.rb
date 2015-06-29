@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.order(:updated_at)
+    @articles = Article.order(:updated_at).reverse
   end
 
   private
