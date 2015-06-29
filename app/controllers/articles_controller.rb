@@ -22,6 +22,17 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def update
+    @article = Article.new(article_attributes)
+    if @article.save
+      flash[:success] = "Публикация отредактирована"
+      redirect_to @article
+    else
+      flash[:danger] = "Произошла ошибка во время редактирования. Попробуйте еще раз."
+      redirect_to new_article_path
+    end
+  end
+
   def index
     @articles = Article.order(:updated_at)
   end
