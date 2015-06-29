@@ -49,6 +49,6 @@ class ServicesController < ApplicationController
   private
     def service_attributes
       params.require(:service).permit(:name, :description,
-                                   :link, :admin_link  )
+                                      :link, :admin_link  )
     end
 end
