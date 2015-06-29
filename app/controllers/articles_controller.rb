@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all.order_by(:updated_at)
+    @articles = Article.order(:updated_at)
   end
 
   private
