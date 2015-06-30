@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :redirect_not_admin,
+  before_action :redirect_not_admin
 
   def new
     @article = Article.new
@@ -33,6 +33,14 @@ class ArticlesController < ApplicationController
       flash[:danger] = "Произошла ошибка во время редактирования. Попробуйте еще раз."
       redirect_to new_article_path
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    flash[:success] = "Публикация удалена"
+    redirect_to articles_path
   end
 
   def index
