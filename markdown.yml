@@ -1,0 +1,4 @@
+# Config-file for markdown gem
+
+# Using redcarpet as markdown library
+lib: redcarpet
