@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :redirect_not_admin
+  before_action :redirect_not_admin, only: [:new, :create, :edit,
+                                            :update, :destroy]
 
   def new
     @article = Article.new
