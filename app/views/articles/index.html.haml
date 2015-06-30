@@ -8,4 +8,8 @@
       = article.description
     %br
     - if admin?
-      = link_to("(редактировать)", edit_article_path(article))
+      (
+      = link_to("редактировать", edit_article_path(article))
+      \/
+      = link_to("удалить", article, method: :delete)
+      )
