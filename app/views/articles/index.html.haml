@@ -5,7 +5,7 @@
     %h3
       = link_to(article.title, article)
     %p
-      = article.description
+      != article.description
     %br
     - if admin?
       (
