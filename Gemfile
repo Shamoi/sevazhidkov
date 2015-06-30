@@ -30,6 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Using bcrypt to password_digest
 gem 'bcrypt'
 
+# Using markdown for articles
+gem 'markdown'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
