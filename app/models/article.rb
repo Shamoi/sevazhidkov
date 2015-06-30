@@ -6,6 +6,9 @@ class Article < ActiveRecord::Base
 
   protected
     def create_html_from_markdown
-      self.text = Markdown.new(self.text).to_html
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                                         autolink: true, tables: true)
+      self.text = markdown.render(self.text)
+      self.description = markdown.render(self.description)
     end
 end
