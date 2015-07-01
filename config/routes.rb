@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'journals/index'
+
+  get 'journals/show'
+
+  get 'journals/edit'
+
+  get 'journals/update'
+
+  get 'journals/new'
+
+  get 'journals/create'
+
+  get 'journals/destroy'
+
   root 'home_page#home'
 
   get '/contact', to: 'home_page#contact', as: 'contact'
