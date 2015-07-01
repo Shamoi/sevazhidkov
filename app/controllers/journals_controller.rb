@@ -1,4 +1,7 @@
 class JournalsController < ApplicationController
+  before_action :redirect_not_admin, only: [:index, :edit, :update,
+                                            :new, :create, :destroy]
+
   def index
   end
 
