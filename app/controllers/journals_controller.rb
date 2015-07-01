@@ -16,6 +16,7 @@ class JournalsController < ApplicationController
   end
 
   def new
+    @journal = Journal.new
   end
 
   def create
