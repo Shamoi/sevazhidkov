@@ -33,6 +33,9 @@ gem 'bcrypt'
 # Using markdown for articles
 gem 'redcarpet'
 
+# Use paperclip for images
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
