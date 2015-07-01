@@ -20,6 +20,14 @@ class JournalsController < ApplicationController
   end
 
   def create
+    @journal = Journal.new(journal_attributes)
+
+    if @journal.save
+      flash[:success] = "Дневник создан"
+      redirect_to @journal
+    else
+      flash[:danger] = "Произошла ошибка при создании дневника"
+      redirect_to new_journal_path
   end
 
   def destroy
