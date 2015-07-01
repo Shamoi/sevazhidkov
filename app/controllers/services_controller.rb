@@ -38,6 +38,7 @@ class ServicesController < ApplicationController
       flash[:success] = "Сервис обновлен"
       redirect_to @service
     else
+      flash[:danger] = "Обновление не удалось"
       redirect_to 'edit'
     end
   end
