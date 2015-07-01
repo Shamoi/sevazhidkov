@@ -1,2 +1,7 @@
-%h1 Journals#index
-%p Find me in app/views/journals/index.html.haml
+- provide(:title, "Список дневников")
+%h2 Список дневников
+- @journals.each do |journal|
+  %h3
+    = journal.name
+  %p
+    = journal.description

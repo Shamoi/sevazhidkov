@@ -3,6 +3,7 @@ class JournalsController < ApplicationController
                                             :new, :create, :destroy]
 
   def index
+    @journals = Journal.all
   end
 
   def show
