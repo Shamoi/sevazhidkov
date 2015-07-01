@@ -28,6 +28,7 @@ class JournalsController < ApplicationController
     else
       flash[:danger] = "Произошла ошибка при создании дневника"
       redirect_to new_journal_path
+    end
   end
 
   def destroy
