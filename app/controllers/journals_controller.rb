@@ -24,4 +24,9 @@ class JournalsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def journal_attributes
+      params.require(:journal).permit(:name, :description)
+    end
 end
