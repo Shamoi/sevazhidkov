@@ -7,6 +7,7 @@
     = journal.description
   - if admin?
     (
-    = link_to("Удалить", journal, method: :delete)
+    = link_to("удалить", journal, method: :delete)
     \/
-    = link_to("Редактировать", edit_journal_path(journal))
+    = link_to("редактировать", edit_journal_path(journal))
+    )
