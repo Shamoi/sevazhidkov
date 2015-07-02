@@ -14,6 +14,14 @@ class JournalsController < ApplicationController
   end
 
   def update
+    @journal = Journal.find(params[:id])
+    if @journal.update_attributes(journal_attributes)
+      flash[:success] = "Дневник обновлен"
+      redirect_to journals_path
+    else
+      flash[:danger] = "Произошла ошибка при редактировании дневника"
+      redirect_to new_journal_path
+    end
   end
 
   def new
