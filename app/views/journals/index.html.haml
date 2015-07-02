@@ -5,3 +5,8 @@
     = journal.name
   %p
     = journal.description
+  - if admin?
+    (
+    = link_to("Удалить", journal, method: :delete)
+    \/
+    = link_to("Редактировать", edit_journal_path(journal))
