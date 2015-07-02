@@ -10,6 +10,7 @@ class JournalsController < ApplicationController
   end
 
   def edit
+    @journal = Journal.find(params[:id])
   end
 
   def update
