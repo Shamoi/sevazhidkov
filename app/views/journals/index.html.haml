@@ -1,5 +1,6 @@
 - provide(:title, "Список дневников")
 %h2 Список дневников
+= link_to("Создать новый дневник", new_journal_path)
 - @journals.each do |journal|
   %h3
     = journal.name
