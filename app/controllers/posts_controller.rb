@@ -6,6 +6,8 @@ class PostsController < ApplicationController
   end
 
   def new
+    @journals = Journal.all
+    @post = Post.new
   end
 
   def create
