@@ -51,6 +51,6 @@ class JournalsController < ApplicationController
 
   private
     def journal_attributes
-      params.require(:journal).permit(:name, :description)
+      params.require(:journal).permit(:short_name, :name, :description)
     end
 end
