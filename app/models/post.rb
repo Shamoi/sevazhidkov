@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :journal
 
   has_attached_file :image, styles: { large: "1280x720" }
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   protected
     def create_html_from_markdown
