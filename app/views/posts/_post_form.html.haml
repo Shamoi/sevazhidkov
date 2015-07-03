@@ -1,0 +1,11 @@
+.input-group.input-group-lg
+  = form_for(@post) do |f|
+    = label(:journal, "Дневник для публикации")
+    %br
+    - @journals.each do |journal|
+      = journal.name
+      = radio_button("post", "journal", journal.name)
+      %br
+    = f.text_field :time, placeholder: "Время", class: "form-control"
+    = f.text_area :text, placeholder: "Текст", class: "form-control"
+    = f.submit "Сохранить изменения", class: "form-control"
