@@ -3,7 +3,7 @@
 = link_to("Создать новый дневник", new_journal_path)
 - @journals.each do |journal|
   %h3
-    = journal.name
+    = link_to(journal.name, journal)
   %p
     = journal.description
   - if admin?
