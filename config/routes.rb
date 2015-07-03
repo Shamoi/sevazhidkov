@@ -30,8 +30,8 @@ Rails.application.routes.draw do
   resources :articles
 
   # Journals
-  resources :journals
-  get '/:name', to: 'journals#show', via: 'get'
+  resources :journals, except: :show
+  get '/:name', to: 'journals#show', via: 'get', as: 'journal'
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
