@@ -4,7 +4,7 @@
     %br
     - @journals.each do |journal|
       = journal.name
-      = radio_button("post", "journal", journal.name)
+      = radio_button("post", "journal", journal.id)
       %br
     = f.text_field :time, placeholder: "Время", class: "form-control"
     = f.text_area :text, placeholder: "Текст", class: "form-control"
