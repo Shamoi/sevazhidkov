@@ -11,7 +11,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_attributes, journal: Journal.find(params['post']['journal']))
+    @post = Post.new(post_attributes)
+    @post.update_attributes(journal: Journal.find(params['post']['journal']))
 
     if @post.save
       flash[:success] = "Пост создан"
