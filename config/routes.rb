@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   resources :articles
 
   # Journals
-  resources :journals, except: :show
+  resources :journals
   get '/:name', to: 'journals#show', via: 'get'
   resources :posts
 
