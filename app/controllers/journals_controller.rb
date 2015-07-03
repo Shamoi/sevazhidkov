@@ -7,7 +7,7 @@ class JournalsController < ApplicationController
   end
 
   def show
-    @journal = Journal.where(short_name: params[:name])
+    @journal = Journal.where(short_name: params[:name]).first
   end
 
   def edit
