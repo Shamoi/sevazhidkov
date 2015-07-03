@@ -26,6 +26,6 @@ module Sevazhidkov
     # Needed to work bootstrap-sass with assets pipeline
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
-    config.time_zone = 'MSK (Moscow Standard Time)'
+    config.time_zone = 'Europe/Moscow'
   end
 end
