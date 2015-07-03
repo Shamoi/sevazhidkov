@@ -3,6 +3,8 @@ class Post < ActiveRecord::Base
 
   belongs_to :journal
 
+  has_attached_file :image, styles: { large: "1280x720" }
+
   protected
     def create_html_from_markdown
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
