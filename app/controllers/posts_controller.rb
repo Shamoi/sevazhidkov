@@ -11,6 +11,15 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(post_attributes, journal: Journal.find(params['post']['journal']))
+
+    if @post.save
+      flash[:success] = "Пост создан"
+      redirect_to root_path
+    else
+      flash[:danger] = "Произошла ошибка при создании поста"
+      redirect_to new_post_path
+    end
   end
 
   def edit
@@ -24,6 +33,6 @@ class PostsController < ApplicationController
 
   private
     def post_attributes
-      params.require(:post).permit(:journal, :time, :text)
+      params.require(:post).permit(:time, :text)
     end
 end
