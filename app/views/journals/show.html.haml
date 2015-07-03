@@ -1,2 +1,14 @@
-%h1 Journals#show
-%p Find me in app/views/journals/show.html.haml
+- provide(:title, @journal.name)
+%h2
+  = @journal.name
+%p
+  = @journal.description
+
+- @journal.posts.each do |post|
+  %article
+    .time
+      = post.time
+    .text
+      = post.text
+    .image
+      image_tag(post.photo) - skip it for dev
