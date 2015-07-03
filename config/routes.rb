@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'posts/index'
+
+  get 'posts/show'
+
+  get 'posts/new'
+
+  get 'posts/create'
+
+  get 'posts/edit'
+
+  get 'posts/update'
+
+  get 'posts/destroy'
+
   root 'home_page#home'
 
   get '/contact', to: 'home_page#contact', as: 'contact'
