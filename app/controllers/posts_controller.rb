@@ -34,6 +34,6 @@ class PostsController < ApplicationController
 
   private
     def post_attributes
-      params.require(:post).permit(:time, :text, :photo)
+      params.require(:post).permit(:time, :text, :image)
     end
 end
