@@ -21,4 +21,9 @@ class PostsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def post_attributes
+      params.require(:post).permit(:journal, :time, :text)
+    end
 end
