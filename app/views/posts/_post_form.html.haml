@@ -1,5 +1,5 @@
 .input-group.input-group-lg
-  = form_for(@post) do |f|
+  = form_for(@post, html: { multipart: true }) do |f|
     = label(:journal, "Дневник для публикации")
     %br
     - @journals.each do |journal|
@@ -8,4 +8,5 @@
       %br
     = f.text_field :time, placeholder: "Время", class: "form-control"
     = f.text_area :text, placeholder: "Текст", class: "form-control"
+    = f.file_field :image
     = f.submit "Сохранить изменения", class: "form-control"
