@@ -5,4 +5,9 @@ describe "Home page" do
     visit '/'
     page.status_code.should == 200
   end
+
+  it "should have right title" do
+    visit '/'
+    expect(page).to have_title('Сева Жидков')
+  end
 end
