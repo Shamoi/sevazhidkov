@@ -7,5 +7,11 @@ describe "Layout" do
       visit '/'
       expect(page).to have_content('Сева Жидков')
     end
+
+    it "should have tagline" do
+      # Home page have all layout
+      visit '/'
+      expect(page).to have_content('Люблю программирование и себя')
+    end
   end
 end
