@@ -1,8 +1,0 @@
-- provide(:title, 'Вход в панель администрирования')
-%h2 Вход в панель администрирования
-.input-group.input-group-lg
-  = form_for(:session, url: sessions_path) do |f|
-    = f.text_field :email, class: 'form-control', placeholder: "E-mail", 'aria-describedby' => "sizing-addon1"
-    = f.password_field :password, class: 'form-control', placeholder: "Пароль"
-
-    = f.submit "Войти", class: 'form-control'

@@ -40,6 +40,6 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
-  # Add Capybara syntax to tests
+  # Using Capybara for usings its DSL for tests
   config.include Capybara::DSL
 end

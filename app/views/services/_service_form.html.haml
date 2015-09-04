@@ -1,7 +1,0 @@
-.input-group.input-group-lg
-  = form_for(@service) do |f|
-    = f.text_field :name, placeholder: "Название сервиса", class: "form-control"
-    = f.text_field :description, placeholder: "Описание сервиса", class: "form-control"
-    = f.text_field :link, placeholder: "Ссылка на сервис", class: "form-control"
-    = f.text_field :admin_link, placeholder: "Ссылка на админку сервиса", class: "form-control"
-    = f.submit "Сохранить изменения", class: "form-control"

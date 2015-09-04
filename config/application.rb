@@ -22,10 +22,5 @@ module Sevazhidkov
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
-    # Needed to work bootstrap-sass with assets pipeline
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
-
-    config.time_zone = 'Europe/Moscow'
   end
 end
