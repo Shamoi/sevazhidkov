@@ -7,7 +7,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header
-      %h1= 'Сева Жидков'
+    = render 'layouts/header'
     %main
       = yield
