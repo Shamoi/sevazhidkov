@@ -44,4 +44,7 @@ group :development, :test do
 
   # I prefer RSpec for testing application
   gem 'rspec-rails'
+
+  # Capybara need to using Capybara DSL in tests
+  gem 'capybara'
 end
