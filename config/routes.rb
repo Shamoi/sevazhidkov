@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/', to: 'home_page#index', as: 'home'
+  root to: 'home#index', as: 'home'
 end
