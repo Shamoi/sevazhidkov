@@ -24,7 +24,7 @@ describe "Layout" do
     it "should have link to git repo" do
       # Home page have all layout
       visit '/'
-      expect(page).to have_link('https://github.com/sevazhidkov/sevazhidkov')
+      expect(page).to have_link('Github', href: 'https://github.com/sevazhidkov/sevazhidkov')
     end
   end
 end
