@@ -15,4 +15,9 @@ describe "layouts/application.html.haml" do
     render
     expect(rendered).to have_css("footer") # True if there is a anchor tag with text hello
   end
+
+  it 'should have basic title if page name is not provided' do
+    render
+    expect(rendered).to have_title('Сева Жидков')
+  end
 end
