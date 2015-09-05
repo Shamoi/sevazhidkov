@@ -1,10 +1,10 @@
 module ApplicationHelper
-  def get_full_title(page_name=nil)
-    basic_title = 'Сева Жидков'
-    if page_name
-      return page_name + ' — ' + basic_title
+  def get_full_title(page_title)
+    base_title = 'Сева Жидков'
+    if page_title.empty?
+      base_title
     else
-      return basic_title
+      "#{page_title} — #{base_title}"
     end
   end
 end
