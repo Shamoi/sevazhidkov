@@ -8,7 +8,7 @@ describe "static_pages/contact.html.haml" do
                             'https://twitter.com/shamoiseva',
                             'https://instagram.com/lifeofshamoi/']
     social_networks_urls.each do |network_url|
-      except(rendered).to have_link(href: network_url)
+      expect(rendered).to have_link(href: network_url)
     end
   end
 end
