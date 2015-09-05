@@ -4,8 +4,8 @@ describe StaticPagesController do
 
   describe "GET 'contact'" do
     it "returns http success" do
-      get 'contact'
-      response.should be_success
+      visit '/contact'
+      page.status_code.should == 200
     end
   end
 
