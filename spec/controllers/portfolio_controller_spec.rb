@@ -39,7 +39,7 @@ describe PortfolioController do
 
   describe "update project" do
     it "returns http success" do
-      post 'update'
+      put 'update'
       response.should be_success
     end
   end
