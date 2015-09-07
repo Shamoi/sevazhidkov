@@ -1,2 +1,3 @@
-%h1 Portfolio#index
-%p Find me in app/views/portfolio/index.html.haml
+- @projects.each do |project|
+  = link_to project.name, project
+  \= project.short_description
