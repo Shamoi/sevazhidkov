@@ -25,4 +25,17 @@ describe Project do
       @project.should respond_to(:description)
     end
   end
+
+  context "project with empty full description" do
+    before do
+      @project = Project.create(name: 'Facedook', short_description: 'Your d.',
+                                description: '')
+    end
+
+    subject { @project }
+
+    it "should not be valid" do
+      @project.should_not be_valid
+    end
+  end
 end
