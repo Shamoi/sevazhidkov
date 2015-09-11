@@ -64,4 +64,34 @@ describe Project do
       @incorrect_project.should_not be_valid
     end
   end
+
+  context "project with too many symbols in short description" do
+    before do
+      # Limit for short description - 146 characters
+      @incorrect_project = Project.create(name: 'Facebook',
+                                          short_description: 'Your d.',
+                                          description: 'a' * 147)
+    end
+
+    subject { @incorrect_project }
+
+    it "should not be valid" do
+      @incorrect_project.should_not be_valid
+    end
+  end
+
+  context "project with too many symbols in project name" do
+    before do
+      # Limit for name - 50 characters
+      @incorrect_project = Project.create(name: 'a' * 51,
+                                          short_description: 'Your d.',
+                                          description: 'Long story')
+    end
+
+    subject { @incorrect_project }
+
+    it "should not be valid" do
+      @incorrect_project.should_not be_valid
+    end
+  end
 end
