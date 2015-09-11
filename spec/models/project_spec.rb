@@ -28,14 +28,40 @@ describe Project do
 
   context "project with empty full description" do
     before do
-      @project = Project.create(name: 'Facedook', short_description: 'Your d.',
-                                description: '')
+      @incorrect_project = Project.create(name: 'Facedook', short_description: 'Your d.',
+                                          description: '')
     end
 
-    subject { @project }
+    subject { @incorrect_project }
 
     it "should not be valid" do
-      @project.should_not be_valid
+      @incorrect_project.should_not be_valid
+    end
+  end
+
+  context "project with empty short description" do
+    before do
+      @incorrect_project = Project.create(name: 'Facedook', short_description: '',
+                                          description: 'Long story')
+    end
+
+    subject { @incorrect_project }
+
+    it "should not be valid" do
+      @incorrect_project.should_not be_valid
+    end
+  end
+
+  context "project with empty name description" do
+    before do
+      @incorrect_project = Project.create(name: '', short_description: 'Your d.',
+                                          description: 'Long story')
+    end
+
+    subject { @incorrect_project }
+
+    it "should not be valid" do
+      @incorrect_project.should_not be_valid
     end
   end
 end
