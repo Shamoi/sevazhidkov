@@ -1,4 +1,8 @@
 class Project < ActiveRecord::Base
+  # Automatic Markdown render of project description
+  before_validation :create_html_description_from_markdown, on: [ :create,
+                                                                  :update ]
+
   validates :name, presence: true, length: { maximum: 50 }
   validates :short_description, presence: true, length: { maximum: 146 }
 
