@@ -28,6 +28,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # I love HAML
 gem 'haml-rails'
 
+# Use Redcarpet for render markdown post, articles etc.
+gem 'redcarpet'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
