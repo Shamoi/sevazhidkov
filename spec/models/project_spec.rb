@@ -78,6 +78,11 @@ describe Project do
     it "should not be valid" do
       @incorrect_project.should_not be_valid
     end
+
+    it "should pass after deleting one symbol from short description" do
+      @incorrect_project.short_description = 'a' * 146
+      @incorrect_project.should be_valid
+    end
   end
 
   context "project with too many symbols in project name" do
@@ -92,6 +97,11 @@ describe Project do
 
     it "should not be valid" do
       @incorrect_project.should_not be_valid
+    end
+
+    it "should pass after deleting one symbol from name" do
+      @incorrect_project.name = 'a' * 50
+      @incorrect_project.should be_valid
     end
   end
 end
