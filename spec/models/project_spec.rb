@@ -69,8 +69,8 @@ describe Project do
     before do
       # Limit for short description - 146 characters
       @incorrect_project = Project.create(name: 'Facebook',
-                                          short_description: 'Your d.',
-                                          description: 'a' * 147)
+                                          short_description: 'a' * 147,
+                                          description: 'Long story')
     end
 
     subject { @incorrect_project }
