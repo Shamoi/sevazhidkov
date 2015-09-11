@@ -28,7 +28,8 @@ describe Project do
 
   context "project with empty full description" do
     before do
-      @incorrect_project = Project.create(name: 'Facedook', short_description: 'Your d.',
+      @incorrect_project = Project.create(name: 'Facedook',
+                                          short_description: 'Your d.',
                                           description: '')
     end
 
@@ -41,7 +42,8 @@ describe Project do
 
   context "project with empty short description" do
     before do
-      @incorrect_project = Project.create(name: 'Facedook', short_description: '',
+      @incorrect_project = Project.create(name: 'Facedook',
+                                          short_description: '',
                                           description: 'Long story')
     end
 
@@ -54,7 +56,8 @@ describe Project do
 
   context "project with empty name description" do
     before do
-      @incorrect_project = Project.create(name: '', short_description: 'Your d.',
+      @incorrect_project = Project.create(name: '',
+                                          short_description: 'Your d.',
                                           description: 'Long story')
     end
 
