@@ -115,4 +115,15 @@ describe Project do
       @incorrect_project.should be_valid
     end
   end
+
+  context "testing markdown convertion function" do
+    before do
+      @project = Project.create(name: 'Facedook', short_description: 'Your d.',
+                                markdown_description: '# Long story')
+    end
+
+    it "should convert text after '#' symbol to h1 tag" do
+      @project.description.should eq("<h1>Long story</h1>")
+    end
+  end
 end
