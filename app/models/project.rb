@@ -3,10 +3,13 @@ class Project < ActiveRecord::Base
   before_validation :create_html_description_from_markdown, on: [ :create,
                                                                   :update ]
 
+  # Project name like 'Facebook', 'Twitter', 'Seva Zhidkov site'
   validates :name, presence: true, length: { maximum: 50 }
+
+  # Short description of project, visible in index projects
   validates :short_description, presence: true, length: { maximum: 146 }
 
-  # Rendered description in HTML
+  # Rendered description in HTML, visible in show action
   validates :description, presence: true
 
   # Project description in markdown
