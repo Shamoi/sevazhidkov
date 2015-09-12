@@ -4,7 +4,7 @@ describe Project do
   context "correct project" do
     before do
       @project = Project.create(name: 'Facedook', short_description: 'Your d.',
-                                description: 'Long description about project')
+                                markdown_description: 'Long description about project')
     end
 
     subject { @project }
@@ -21,8 +21,16 @@ describe Project do
       @project.should respond_to(:short_description)
     end
 
-    it "should respond to full description" do
+    it "should respond to full html description" do
       @project.should respond_to(:description)
+    end
+
+    it "should have not empty rendered html description" do
+      @project.description.should_not be_empty
+    end
+
+    it "should respond for markdown description" do
+      @project.should respond_to(:markdown_description)
     end
   end
 
