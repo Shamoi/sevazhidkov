@@ -19,6 +19,6 @@ class Project < ActiveRecord::Base
     def create_html_description_from_markdown
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
                                          autolink: true, tables: true)
-      self.description = markdown.render(self.markdown_description)
+      self.description = markdown.render(self.markdown_description).chomp
     end
 end
