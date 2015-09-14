@@ -125,5 +125,9 @@ describe Project do
     it "should convert text after '#' symbol to h1 tag" do
       @project.description.should eq("<h1>Long story</h1>")
     end
+
+    it "should have unrendered markdown text" do
+      @project.markdown_description.should eq("# Long story")
+    end
   end
 end
