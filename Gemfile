@@ -34,6 +34,9 @@ gem 'redcarpet'
 # Use rails_admin for generating admin (for early stage of developing)
 gem 'rails_admin'
 
+# Use paperclip for image uploading
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
