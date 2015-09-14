@@ -31,6 +31,9 @@ gem 'haml-rails'
 # Use Redcarpet for render markdown post, articles etc.
 gem 'redcarpet'
 
+# Use rails_admin for generating admin (for early stage of developing)
+gem 'rails_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
