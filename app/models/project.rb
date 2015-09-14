@@ -9,9 +9,6 @@ class Project < ActiveRecord::Base
   # Short description of project, visible in index projects
   validates :short_description, presence: true, length: { maximum: 146 }
 
-  # Rendered description in HTML, visible in show action
-  validates :description, presence: true
-
   # Project description in markdown
   validates :markdown_description, presence: true
 
