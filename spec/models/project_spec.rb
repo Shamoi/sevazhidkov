@@ -38,7 +38,7 @@ describe Project do
     before do
       @incorrect_project = Project.create(name: 'Facedook',
                                           short_description: 'Your d.',
-                                          description: '')
+                                          markdown_description: '')
     end
 
     subject { @incorrect_project }
@@ -52,7 +52,7 @@ describe Project do
     before do
       @incorrect_project = Project.create(name: 'Facedook',
                                           short_description: '',
-                                          description: 'Long story')
+                                          markdown_description: 'Long story')
     end
 
     subject { @incorrect_project }
@@ -62,11 +62,11 @@ describe Project do
     end
   end
 
-  context "project with empty name description" do
+  context "project with empty name" do
     before do
       @incorrect_project = Project.create(name: '',
                                           short_description: 'Your d.',
-                                          description: 'Long story')
+                                          markdown_description: 'Long story')
     end
 
     subject { @incorrect_project }
@@ -81,7 +81,7 @@ describe Project do
       # Limit for short description - 146 characters
       @incorrect_project = Project.create(name: 'Facebook',
                                           short_description: 'a' * 147,
-                                          description: 'Long story')
+                                          markdown_description: 'Long story')
     end
 
     subject { @incorrect_project }
@@ -101,7 +101,7 @@ describe Project do
       # Limit for name - 50 characters
       @incorrect_project = Project.create(name: 'a' * 51,
                                           short_description: 'Your d.',
-                                          description: 'Long story')
+                                          markdown_description: 'Long story')
     end
 
     subject { @incorrect_project }
