@@ -1,6 +1,6 @@
 - @projects.each do |project|
   %article
-    = image_tag project.picture.url(:full)
+    = image_tag project.picture.url
     = link_to project.name, project
     != project.short_description
     = get_date_of(project.built_at)
