@@ -7,7 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Project.create([{ name: 'Do my homework',  short_description: 'School homework',
-                  markdown_description: 'My big homework from my school teacher' },
+                  markdown_description: 'My big homework from my school teacher',
+                  built_at: Time.now },
                 { name: 'Create new Facebook',  short_description: 'Startup',
-                  markdown_description: 'Every startup man wanna makes new Facebook' }
+                  markdown_description: 'Every startup man wanna makes new Facebook',
+                  built_at: Time.now + 1 }
                ])
