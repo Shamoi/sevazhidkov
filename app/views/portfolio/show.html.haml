@@ -1,4 +1,4 @@
 %article
   = @project.name
   != @project.description
-  = @project.built_at
+  = get_date_of(@project.built_at)

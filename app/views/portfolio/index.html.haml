@@ -2,4 +2,4 @@
   %article
     = link_to project.name, project
     != project.short_description
-    = project.built_at
+    = get_date_of(project.built_at)
