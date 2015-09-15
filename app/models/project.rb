@@ -14,6 +14,7 @@ class Project < ActiveRecord::Base
 
   # Picture of project, visible on index and show actions
   has_attached_file :picture, :styles => { :full => "1280x720>" }
+  validates_attachment_content_type :picture, :content_type => /^image\/(bmp|gif|jpg|jpeg|png)/
 
   protected
     def create_html_description_from_markdown
