@@ -12,6 +12,10 @@ class Project < ActiveRecord::Base
   # Project description in markdown
   validates :markdown_description, presence: true
 
+  # Picture of project, visible on index and show actions
+  attr_accessible :picture
+  has_attached_file :picture, :styles => { :full => "1280x720>" }
+
   protected
     def create_html_description_from_markdown
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
