@@ -7,7 +7,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    title = models.СharField(max_length=146)
+    title = models.CharField(max_length=146)
     preview_text = models.TextField()
     preview_image = models.ImageField()
     html_text = models.TextField()
