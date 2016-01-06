@@ -5,24 +5,24 @@ class Cacher:
     def __init__(self):
         self.cache = []
 
-    def get(self, url):
+    def get(self, name):
         new_cache = []
         result = None
         for cache_item in self.cache:
             if not cache_item.check_ttl():
                 continue
             new_cache.append(cache_item)
-            if cache_item.url == url:
+            if cache_item.name == name:
                 result = cache_item.value
         self.cache = new_cache
         return result
 
-    def add(self, url, value, ttl):
-        self.cache.append(CachedItem(url, value, ttl))
+    def add(self, name, value, ttl):
+        self.cache.append(CachedItem(name, value, ttl))
 
 class CachedItem:
-    def __init__(self, url, value, ttl):
-        self.url = url
+    def __init__(self, name, value, ttl):
+        self.name = name
         self.value = value
         self.ttl = ttl
         self.start_time = time.time()
