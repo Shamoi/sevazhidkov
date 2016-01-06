@@ -1,4 +1,117 @@
-["Votkinsk", "Izhevsk", "Moscow", "Saint Petersberg", "Sochi", "Gelendzhik",
- "Taba", "Denizli Province", "Side", "Antalya", "Konakli", "Okurcalar",
- "Simferopol'", "Yalta", "Sevastopol'", "London", "Voronezh", "Perm",
- "Yekaterinburg", "Sharkan", "Kostroma", "Zadonsk", "Lipeck", "Novi Urengói"]
+ [
+   {
+     "name": "Votkinsk",
+     "lat": 57.040944,
+     "long": 53.976930,
+   },
+   {
+     "name": "Izhevsk",
+     "lat": 56.861860,
+     "long": 53.232428
+   },
+   {
+     "name": "Moscow",
+     "lat": 55.755826,
+     "long": 37.617300
+   },
+   {
+     "name": "Saint Petersberg",
+     "lat": 27.751828,
+     "long": -82.626734
+   },
+   {
+     "name": "Sochi",
+     "lat": 43.602808,
+     "long": 39.734154
+   },
+   {
+     "name": "Gelendzhik",
+     "lat": 44.591862,
+     "long": 38.024166
+   },
+   {
+     "name": "Taba",
+     "lat": 29.492568,
+     "long": 34.894903
+   },
+   {
+     "name": "Denizli Province",
+     "lat": 37.612839,
+     "long": 29.232078
+   },
+   {
+     "name": "Side",
+     "lat": 36.776873,
+     "long": 31.397644
+   },
+   {
+     "name": "Antalya",
+     "lat": 36.896891,
+     "long": 30.713323
+   },
+   {
+     "name": "Konakli",
+     "lat": 36.592555,
+     "long": 31.896255
+   },
+   {
+     "name": "Okurcalar",
+     "lat": 36.650000,
+     "long": 31.697500
+   },
+   {
+     "name": "Simferopol'",
+     "lat": 44.952117,
+     "long": 34.102417
+   },
+   {
+     "name": "Yalta",
+     "lat": 44.495205,
+     "long": 34.166301
+   },
+   {
+     "name": "Sevastopol'",
+     "lat": 44.616650,
+     "long": 33.525367
+   },
+   {
+     "name": "London",
+     "lat": 51.507351,
+     "long": -0.127758
+   },
+   {
+     "name": "Voronezh",
+     "lat": 51.675497,
+     "long": 39.208882
+   },
+   {
+     "name": "Perm",
+     "lat": 58.029681,
+     "long": 56.266792
+   },
+   {
+     "name": "Yekaterinburg",
+     "lat": 56.838926,
+     "long": 60.605703
+   },
+   {
+     "name": "Kazan",
+     "lat": 55.830431,
+     "long": 49.066081
+   },
+   {
+     "name": "Kostroma",
+     "lat": 57.777482,
+     "long": 40.969893
+   },
+   {
+     "name": "Lipeck",
+     "lat": 52.612200,
+     "long": 39.598123
+   },
+   {
+     "name": "Novi Urengói",
+     "lat": 66.095686,
+     "long": 76.656352
+   }
+ ]
