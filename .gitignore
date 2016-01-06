@@ -1,6 +1,9 @@
 .DS_Store
 .env
 
+loaded_messages.json
+vk_config.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
