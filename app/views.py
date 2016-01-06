@@ -12,7 +12,7 @@ def index():
 @app.route('/places')
 def places_index():
     cities = places.get_all_places(cache)
-    return str(cities)
+    return render_template('apps/places.html', places=cities)
 
 @app.route('/word-count')
 def words_index():

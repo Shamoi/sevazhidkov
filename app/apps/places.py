@@ -1,4 +1,3 @@
-from flask import render_template
 import requests
 import json
 
@@ -11,4 +10,4 @@ def get_all_places(cache):
     if not result:
         result = json.loads(requests.get(PLACES_FILE_URL).text)
         cache.add(PLACES_FILE_URL, result, 3600)
-    return render_template('apps/places.html', places=result)
+    return result
