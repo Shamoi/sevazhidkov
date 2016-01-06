@@ -2,6 +2,7 @@
 .env
 
 loaded_messages.json
+loaded_vk_messages.json
 vk_config.json
 
 # Byte-compiled / optimized / DLL files
