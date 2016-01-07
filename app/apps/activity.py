@@ -23,6 +23,7 @@ def get_github_activity(cache):
             repo_name = event['repo']['name']
             repo_link = "<a href='{}'>{}</a>".format(repo_href, repo_name)
             activity.append(event_text.format(commits_num, repo_link))
+
         if event['type'] == 'CreateEvent':
             # If it not repository creation (for example, change of description)
             # just skip event
@@ -36,6 +37,7 @@ def get_github_activity(cache):
             repo_name = event['repo']['name']
             repo_link = "<a href='{}'>{}</a>".format(repo_href, repo_name)
             activity.append(event_text.format(repo_link))
+
         if event['type'] == 'IssueCommentEvent':
             event_text = 'Commented issue "{}" in {}'
 
@@ -50,6 +52,7 @@ def get_github_activity(cache):
             repo_link = "<a href='{}'>{}</a>".format(repo_href, repo_name)
 
             activity.append(event_text.format(issue_link, repo_link))
+
         if event['type'] == 'PullRequestEvent':
             event_text = '{} pull request "{}" in {}'
 
@@ -66,5 +69,23 @@ def get_github_activity(cache):
             repo_link = "<a href='{}'>{}</a>".format(repo_href, repo_name)
 
             activity.append(event_text.format(event_type, pr_link, repo_link))
-        # TODO: IssueCreateEvent
-    return activity[:]
+
+        if event['type'] == 'IssuesEvent':
+            event_text = '{} issue "{}" in {}'
+
+            event_type = event['payload']['action'].capitalize()
+
+            issue_href = event['payload']['issue']['url']
+            issue_href = issue_href.replace('api.', '').replace('repos/', '')
+            issue_name = event['payload']['issue']['title']
+            issue_link = "<a href='{}'>{}</a>".format(issue_href, issue_name)
+
+            repo_href = event['repo']['url']
+            repo_href = repo_href.replace('api.', '').replace('repos/', '')
+            repo_name = event['repo']['name']
+            repo_link = "<a href='{}'>{}</a>".format(repo_href, repo_name)
+
+            activity.append(event_text.format(
+                 event_type, issue_link, repo_link
+            ))
+    return activity[:5]
