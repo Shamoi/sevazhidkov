@@ -3,12 +3,16 @@ import time
 from flask import render_template
 
 from . import app, cache
-from .apps import places, word_count
+from .apps import activity, places, word_count
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    github_activity = activity.get_github_activity()
+    return render_template(
+        'index.html',
+        contributions=github_activity
+    )
 
 
 @app.route('/places')
