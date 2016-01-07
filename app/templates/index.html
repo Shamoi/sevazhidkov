@@ -44,7 +44,7 @@
         <h4>Last activity in <b>Github</b></h4>
         <ul>
           {% for contribution in contributions %}
-            <li>{{ contribution }}</li>
+            <li>{{ contribution|safe }}</li>
           {% endfor %}
         </ul>
       </div>

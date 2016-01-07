@@ -8,7 +8,7 @@ from .apps import activity, places, word_count
 
 @app.route('/')
 def index():
-    github_activity = activity.get_github_activity()
+    github_activity = activity.get_github_activity(cache)
     return render_template(
         'index.html',
         contributions=github_activity
