@@ -31,7 +31,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
+      <div class="one-half column" style="margin-top: 15%">
         <h4>My name is <b>Seva</b></h4>
         <p>School student from Russia, Python developer.</p>
         <aside>
@@ -40,13 +40,19 @@
           <a>Contact me</a>
         </aside>
       </div>
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Last activity in <b>Github</b></h4>
+      <div class="one-half column" style="margin-top: 15%">
+        <h4>Activity in <b>Github</b></h4>
         <ul>
           {% for contribution in contributions %}
             <li>{{ contribution|safe }}</li>
           {% endfor %}
         </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-half column" style="margin-top: 0%">
+        <h4>Last post in <b>Twitter</b></h4>
+        <p lang="en" dir="ltr">Creating personal site on Flask. It&#39;s awesome: light, fast and extendable. Highly recommended.</p>&mdash; Seva Zhidkov (@sevazhidkov) <a href="https://twitter.com/sevazhidkov/status/685075517784113152">January 7, 2016</a>
       </div>
     </div>
   </div>
