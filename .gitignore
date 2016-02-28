@@ -68,8 +68,5 @@ target/
 # pyenv
 .python-version
 
-# Development database
-db.sqlite3
-
 # OS X specific
 .DS_Store
