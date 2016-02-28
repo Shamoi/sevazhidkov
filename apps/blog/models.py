@@ -6,6 +6,8 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     preview_text = models.CharField(max_length=400, default='')
+    preview_photo = models.ImageField(upload_to='media/blog/img/previews',
+                                      default='')
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
