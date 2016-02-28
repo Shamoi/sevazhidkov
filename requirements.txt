@@ -1,4 +1,1 @@
-flask
-gunicorn
-requests
-vk_api
+django
