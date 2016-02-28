@@ -69,4 +69,7 @@ target/
 .python-version
 
 # Development database
-db.sqllite3
+db.sqlite3
+
+# OS X specific
+.DS_Store

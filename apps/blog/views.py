@@ -1,5 +1,11 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView, DetailView
 
-def post_list(request):
-    return HttpResponse('post list')
+from .models import Post
+
+
+class PostsListView(ListView):
+    queryset = Post.objects.order_by('-published_date')
+
+
+class PostDetailView(DetailView):
+    model = Post
