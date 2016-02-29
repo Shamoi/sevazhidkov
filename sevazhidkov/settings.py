@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.blog'
+    'ckeditor',
+    'ckeditor_uploader',
+    'apps.blog',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -71,6 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sevazhidkov.wsgi.application'
 
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -121,6 +124,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = 'static/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 MEDIA_URL = '/'
+
+CKEDITOR_UPLOAD_PATH = 'media'
+
+CKEDITOR_IMAGE_BACKEND = 'pillow'

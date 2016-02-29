@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Post(models.Model):
@@ -8,9 +9,9 @@ class Post(models.Model):
     preview_text = models.CharField(max_length=400, default='')
     preview_photo = models.ImageField(upload_to='media/blog/img/previews',
                                       default='')
-    text = models.TextField()
+    content = RichTextUploadingField(null=True)
     created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
 
     @property
     def url(self):
