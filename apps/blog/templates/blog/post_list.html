@@ -83,16 +83,16 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% for post in object_list %}
-                    <div class="post-preview">
+                    <div class="post-preview" style="background-color: {{ post.color }}; padding: 5%;">
                         <a href="{{ post.url }}">
-                            <h2 class="post-title">
+                            <h2 class="post-title" style="{% if post.color != '#ffffff' %}color: #ffffff;{% endif %}">
                                 {{ post.title }}
                             </h2>
-                            <h3 class="post-subtitle">
+                            <h3 class="post-subtitle" style="{% if post.color != '#ffffff' %}color: #ffffff;{% endif %}">
                                 {{ post.preview_text }}
                             </h3>
                         </a>
-                        <p class="post-meta">Posted by <b>{{ post.author.username }}</b> on {{ post.published_date }}</p>
+                        <p class="post-meta" style="{% if post.color != '#ffffff' %}color: #ffffff;{% endif %}">Posted by <b>{{ post.author.username }}</b> on {{ post.published_date }}</p>
                     </div>
                     <hr>
                 {% endfor %}

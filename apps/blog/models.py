@@ -9,6 +9,7 @@ class Post(models.Model):
     preview_text = models.CharField(max_length=400, default='')
     preview_photo = models.ImageField(upload_to='blog/img/previews',
                                       default='', null=True, blank=True)
+    color = models.CharField(max_length=7, default='#ffffff')
     custom_url = models.CharField(max_length=200, default='', null=True, blank=True)
     content = RichTextUploadingField(null=True, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
