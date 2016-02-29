@@ -97,11 +97,13 @@
                     <hr>
                 {% endfor %}
                 <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
+                {% if page_obj.has_next %}
+                    <ul class="pager">
+                        <li class="next">
+                            <a href="/?page={{ page_obj.next_page_number }}">Older Posts &rarr;</a>
+                        </li>
+                    </ul>
+                {% endif %}
             </div>
         </div>
     </div>
