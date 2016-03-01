@@ -19,14 +19,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '96+ifcrhpqb9b9&s(v-5==k&p$2xw9inf=7v)gk$$a*bn!3gm1'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get('PRODUCTION_ENV', None) == '1':
+    DEBUG = False
+else:
+    DEBUG = True
 
-ALLOWED_HOSTS = []
+# SECURITY WARNING: keep the secret key used in production secret!
+if DEBUG:
+    SECRET_KEY = '96+ifcrhpqb9b9&s(v-5==k&p$2xw9inf=7v)gk$$a*bn!3gm1'
+else:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
+ALLOWED_HOSTS = ['sevazhidkov.me', 'sevazhidkov.asuscomm.com', '192.168.1.202', '127.0.0.1']
 
 # Application definition
 
@@ -78,12 +83,25 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'sevazhidkovdb',
+            'USER': 'sevazhidkovdbuser',
+            'PASSWORD': os.environ['DB_PASSWORD'],
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 
 # Password validation
